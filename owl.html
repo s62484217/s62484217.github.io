@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.css">
+
+    <style>
+        .item{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-8">
+                <!-- Set up your HTML -->
+                <div class="owl-carousel owl-theme">
+                    <div class="item"> Your Content </div>
+                    <div class="item"> Your Content </div>
+                    <div class="item"> Your Content </div>
+                    <div class="item"> Your Content </div>
+                    <div class="item"> Your Content </div>
+                    <div class="item"> Your Content </div>
+                    <div class="item"> Your Content </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                margin: 30,
+                loop: true,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
