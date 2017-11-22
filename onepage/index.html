@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/unslider-dots.css">
+    <link rel="stylesheet" href="css/unslider.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 用fontawesome的svg圖的話，要找到他的網址 getStarted裡複製Font Awesome CDN到google
+         點開即有可複製網址列 -->
     <style>
     </style>
 </head>
@@ -27,6 +32,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- 漢堡條圖案按鈕 -->
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mt-1">
@@ -70,6 +76,30 @@
                 </div>
             </div>
         </nav>
+        <div class="my-slider">
+            <ul>
+                <li>
+                    <div class="bg img0">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="bg img1">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="bg img2">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="bg img3">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="container">
@@ -98,14 +128,32 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> 閹割版不吃unslider-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-    <script>
 
+    <script src="js/unslider-min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.my-slider').unslider({
+                autoplay: true,
+                infinite: true,
+                arrows: {
+                    prev: '<a class="unslider-arrow prev"><i class="fa fa-chevron-circle-left fa-4x" aria-hidden="true"></i></a>',
+                    // 左
+                    next: '<a class="unslider-arrow next"><i class="fa fa-chevron-circle-right fa-4x" aria-hidden="true"></i></a>',
+                    // 右
+                }
+
+            });
+        });
+            // 這三行是jQuery的初始化指令 jQuery=$字符號
+            // 用外部連結記得去network看有無載入
+            // arrows是放在 $('').unslider(裡面要加一個{}包起來)
     </script>
 </body>
 

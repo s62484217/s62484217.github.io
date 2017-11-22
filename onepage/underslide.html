@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/unslider-dots.css">
+    <link rel="stylesheet" href="css/unslider.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 用fontawesome的svg圖的話，要找到他的網址 getStarted裡複製Font Awesome CDN到google
+         點開即有可複製網址列 -->
+    <style>
+        body{
+            background-color: rgb(168, 163, 163);
+        }
+        .bg{
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        .img1{
+            background-image: url(https://cdn.pixabay.com/photo/2017/04/10/12/59/hare-2218492_960_720.jpg);
+        }
+        .img2{
+            background-image: url(http://maxpixel.freegreatpicture.com/static/photo/1x/Funny-Evil-Film-Character-Cute-Hare-Snowball-Pets-1634315.jpg);
+        }
+         .img3{
+            background-image: url(http://maxpixel.freegreatpicture.com/static/photo/1x/Sleep-Deprivation-Cute-Animal-Sleep-Sleeping-Fox-967657.jpg);
+        }
+        .unslider-arrow{
+            top:50%;
+            color:rgb(247, 247, 247);
+            /* 箭頭class屬性 */
+        }
+        .unslider-arrow.next{
+            top:50%;
+        }
+        .unslider{
+            position: relative;
+        }
+        /* banner最外面那層 */
+        .unslider-nav{
+            position: absolute;
+            bottom:10px;
+            left:50%;
+
+        /* 下面圈圈那層 */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="my-slider">
+        <ul>
+            <li>
+                <div class="bg img1">
+
+                </div>
+            </li>
+            <li>
+                <div class="bg img2">
+
+                </div>
+            </li>
+            <li>
+                <div class="bg img3">
+
+                </div>
+            </li>
+        
+        
+        </ul>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/unslider-min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.my-slider').unslider({
+                arrows: {
+                   prev: '<a class="unslider-arrow prev"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>',
+                    // 左
+                    next: '<a class="unslider-arrow next"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>',
+                    // 右
+                    }
+
+            });
+        });
+        // 這三行是jQuery的初始化指令 jQuery=$字符號
+        // 用外部連結記得去network看有無載入
+        // arrows是放在 $('').unslider(裡面要加一個{}包起來)
+       
+    </script>
+</body>
+</html>

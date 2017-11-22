@@ -21,6 +21,7 @@ body{
     left:50%;
     transform:translateX(-50%);
     background-position: center;
+    z-index: 3;
 }
 
 .logo_center{
@@ -38,10 +39,6 @@ body{
     width: 10px;
     height: 30px;
     background-color: green;
-    /* background-image:url("/imgs/gh.png");
-    background-size: contain;
-    background-repeat: no-repeat; */
-
     display: inline-block;
 }
 
@@ -108,6 +105,65 @@ a{
   padding: 0 .5em;
   line-height: 1.5em;
   background-color: #fcfcfa;
+}
+
+.bg{
+    margin-top: 50px;
+    width: 100%;
+    height: 80vh;
+    /* 待修改 */
+    background-size: cover;
+    background-position: center;
+}
+.img0{
+    background-image: url("../imgs/000.jpg");
+}
+.img1{
+    background-image: url("../imgs/pro01.jpg");
+}
+.img2{
+    background-image: url("../imgs/pro05.jpg");
+}
+ .img3{
+    background-image: url("../imgs/pro09.jpg");
+}
+
+.unslider-arrow{
+    top:50%;
+    color:rgb(247, 247, 247);
+    /* 箭頭class屬性 */
+}
+
+.unslider-arrow.prev{
+    top:50%;
+    opacity: 0.1;
+}
+
+.unslider-arrow.prev:hover {
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.unslider-arrow.next{
+    top:50%;
+    opacity: 0.1;
+}
+
+.unslider-arrow.next:hover {
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.unslider{
+    position: relative;
+}
+/* banner最外面那層 */
+.unslider-nav{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+
+/* 下面圈圈那層 */
 }
 
 @keyframes fadin{
