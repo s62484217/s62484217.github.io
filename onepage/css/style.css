@@ -3,7 +3,7 @@ body{
 }
 
 .top{
-    background-image: url("imgs/motcha_top.jpg");
+    background-image: url("../imgs/motcha_top.jpg");
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -15,7 +15,7 @@ body{
 .logo{
     width: 130px;
     height: 180px;
-    background-image: url("imgs/logo.png");
+    background-image: url("../imgs/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -54,7 +54,7 @@ a{
 .newMessage{
     width: 600px;
     height: 200px;
-    background-image: url("imgs/Information.png");
+    background-image: url("../imgs/Information.png");
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0 auto;
