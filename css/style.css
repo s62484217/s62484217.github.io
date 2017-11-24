@@ -149,6 +149,31 @@ a{
     position: absolute;
 }
 .simg_4{
+    width: 800px;
+    height: 400px;
     left: 50%;
     transform: translate(-50%);
+    background-image: url("/imgs/step_4_img.jpg");
+}
+
+.cus_footer{
+    background-color:rgb(56, 53, 53);
+}
+
+.address{
+    width: 50%;
+    height: 50px;
+    color: white;
+    float: left;
+}
+
+.info{
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+}
+
+.ft_bg{
+    width: 100%;
+
 }
