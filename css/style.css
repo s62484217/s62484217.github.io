@@ -1,5 +1,6 @@
 body{
     height: 2000px;
+    background-color: black;
 }
 
 .top{
@@ -70,9 +71,9 @@ a{
   position: relative;
   outline: 0;
   border: 0;
-  color: black;
   text-align: center;
   height: 1.5em;
+  font-size: 20px;
   /* opacity: .5; */
 }
 .hr-text:before {
@@ -95,5 +96,59 @@ a{
   background-color: #fcfcfa;
 }
 
+.swiper-slide{
+    background: black !important;
+}
 
+.step{
+    margin-top:20px; 
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
 
+.step_img{
+    width: 200px;
+}
+
+.select_all{
+    width: 800px;
+    position: absolute;
+}
+
+.step_1{
+    left: 10px;
+    z-index: 3;
+    position: absolute;
+}
+.simg_1{
+    left: 50%;
+    transform: translate(-50%);
+}
+.step_2{
+    right: 0;
+    z-index: 3;
+    position: absolute;
+}
+.simg_2{
+    left: 50%;
+    transform: translate(-50%);
+}
+.step_3{
+    left: 0;
+    z-index: 3;
+    position: absolute;
+}
+.simg_3{
+    left: 50%;
+    transform: translate(-50%);
+}
+.step_4{
+    right: 0;
+    z-index: 3;
+    position: absolute;
+}
+.simg_4{
+    left: 50%;
+    transform: translate(-50%);
+}
