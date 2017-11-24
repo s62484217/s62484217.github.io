@@ -17,6 +17,28 @@
     <!-- 用fontawesome的svg圖的話，要找到他的網址 getStarted裡複製Font Awesome CDN到google
     點開即有可複製網址列 -->
     <style>
+                       .swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
     </style>
 </head>
 
@@ -68,32 +90,20 @@
 
     <div class="top">
     </div>
-
-    <div class="my-slider">
-        <ul>
-            <li>
-                <div class="bg img1">
-                    1111111111111111111111
-                </div>
-            </li>
-            <li>
-                <div class="bg img2">
-                    2222222222222222222222
-                </div>
-            </li>
-            <li>
-                <div class="bg img3">
-                    333333333333333333333
-                </div>
-            </li>
-    
-    
-        </ul>
-    </div>
-
-    <div class="container">
+        <div class="container">
         <div class="spaceMargin"></div>
         <hr class="hr-text" data-content="訊息專區">
+                              <!-- Swiper -->
+  <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"> <img src="imgs/un_1.jpg" alt=""></div>
+          <div class="swiper-slide"> <img src="imgs/un_2.jpg" alt=""></div>
+          <div class="swiper-slide"> <img src="imgs/un_3.jpg" alt=""></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
         <div class="row">
             <div class="col-12 col-xl">
                 <div class="color">1 of 3</div>
@@ -125,23 +135,16 @@
         crossorigin="anonymous"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/unslider-min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script>
-        jQuery(document).ready(function ($) {
-            $('.my-slider').unslider({
-                arrows: {
-                    prev: '<a class="unslider-arrow prev"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>',
-                    // 左
-                    next: '<a class="unslider-arrow next"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>',
-                    // 右
-                }
-
+            var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop:true,
             });
-        });
-            // 這三行是jQuery的初始化指令 jQuery=$字符號
-            // 用外部連結記得去network看有無載入
-            // arrows是放在 $('').unslider(裡面要加一個{}包起來)
-
-    </script>
+        </script>
 </body>
 
 </html>
