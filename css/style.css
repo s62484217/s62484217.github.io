@@ -25,6 +25,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    animation: fadin 3s 1;
 }
 
 .logo_gh{
@@ -176,4 +177,15 @@ a{
 .ft_bg{
     width: 100%;
 
+}
+
+
+@keyframes fadin{
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
