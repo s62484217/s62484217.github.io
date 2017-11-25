@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .info {
+            padding-top: 30px;
+        }
+        .info_title{
+            text-align: center;
+            padding-top: 90.7px;
+        }
+        strong {
+            font-size: 65px;
+            text-transform: uppercase;
+            color: white;
+        }
+        .split{
+            color: white;
+        }
+        #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img class="logo" src="imgs/logo_2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mt-1">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/menu.html">
+                            <div class="logo_gh"></div>美食饗宴
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/news.html">
+                            <div class="logo_gh"></div>最新消息
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <div class="logo_gh"></div>店家資訊
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <div class="logo_gh"></div>關於赤鬼
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="info_title">
+        <div class="container">
+            <h2>
+                <strong>Store</strong>
+                <em class="split">
+                    <span>分</span>
+                    <span>店</span>
+                    <span>查</span>
+                    <span>詢</span>
+                </em>
+            </h2>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="info">
+            <div class="row">
+                <div class="col-6">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            請選擇地區
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">台中</a>
+                            <a class="dropdown-item" href="#">高雄</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            請選擇地區
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">公益店</a>
+                            <a class="dropdown-item" href="#">崇德店</a>
+                            <a class="dropdown-item" href="#">逢甲店</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 24.1507766, lng: 120.6499019};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-uLrP8kGE9VjY3Wx7yPJzn58FrpeHsg4&callback=initMap">
+    </script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/unslider-min.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+</body>
+
+</html>
