@@ -150,11 +150,8 @@ a{
     position: absolute;
 }
 .simg_4{
-    width: 800px;
-    height: 400px;
     left: 50%;
     transform: translate(-50%);
-    background-image: url("/imgs/step_4_img.jpg");
 }
 
 .cus_footer{
