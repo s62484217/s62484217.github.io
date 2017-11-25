@@ -21,16 +21,52 @@
             margin: 0;
             margin-top: 10px;
         }
-        body{
+
+        body {
             background-color: black;
-            color:white;
+            color: white;
             font-family: 微軟正黑體;
         }
-        .bg_menu{
-            height:150px ;
+
+        .bg_menu {
+            height: 150px;
             width: 100%;
             margin-top: 90.77px;
             background-image: url('imgs/bgf.png');
+        }
+
+        .test_box {
+            position: relative;
+        }
+
+        .bg_menu_left {
+            height: 10vh;
+            width: 40%;
+            padding-bottom: 10px;
+            background-size: contain;
+            background-image: url('imgs/123.png');
+            position: absolute;
+
+        }
+
+        .bg_menu_right {
+            height: 10vh;
+            width: 40%;
+            padding-bottom: 10px;
+            background-size: contain;
+            background-image: url('imgs/123.png');
+            position: absolute;
+            top: 1vh;
+            left: 56%;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #e98a17;
+            font-family: 微軟正黑體;
+            position: absolute;
+            top: 10px;
+            left: 46%;
         }
     </style>
 
@@ -81,27 +117,39 @@
             </div>
         </div>
     </nav>
+
     <div class="container">
-        <div class="bg_menu">
-        </div>
-        <!-- <hr class="hr-text" data-content="Menu"> -->
-        <div class="row">
-            <div class="col-6">
-                <a href="/images/b1.jpg " data-lightbox="image-1" data-title="炙烤豬排">
-                    <img width="100%" src="/images/c2.jpg" alt="">
-                </a>
-                <div class="menu_title">
-                    <h3>炙烤豬排</h3>
-                </div>
-                <div class="menu_text">
-                    <br> 產地：台灣特選CAS豬肉
-                    <br> 特色：肉質紮實、香氣十足！
-                    <br> 建議最佳熟度: 全熟
-                    <br> ※須外加10%服務費(外帶則需加10%餐具費用)
-                    <br> 售價：280元
-                </div>
+        <div class="title_box">
+            <div class="bg_menu_left">
             </div>
-            <div class="col-6">
+            <div class="title">
+                美食饗宴
+            </div>
+            <div class="bg_menu_right">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+            <!-- <hr class="hr-text" data-content="Menu"> -->
+            <div class="row">
+                <div class="col-6">
+                    <a href="/images/b1.jpg " data-lightbox="image-1" data-title="炙烤豬排">
+                        <img width="100%" src="/images/c2.jpg" alt="">
+                    </a>
+                    <div class="menu_title">
+                        <h3>炙烤豬排</h3>
+                    </div>
+                    <div class="menu_text">
+                        <br> 產地：台灣特選CAS豬肉
+                        <br> 特色：肉質紮實、香氣十足！
+                        <br> 建議最佳熟度: 全熟
+                        <br> ※須外加10%服務費(外帶則需加10%餐具費用)
+                        <br> 售價：280元
+                    </div>
+                </div>
+                <div class="col-6">
                     <a href="/images/b2.jpg " data-lightbox="image-1" data-title="酥烤雞排">
                         <img width="100%" src="/images/c5.jpg" alt="">
                     </a>
@@ -117,63 +165,63 @@
                     </div>
                 </div>
                 <div class="col-6">
-                        <a href="/images/b3.jpg " data-lightbox="image-1" data-title="沙朗牛排">
-                            <img width="100%" src="/images/c1.jpg" alt="">
-                        </a>
-                        <div class="menu_title">
-                            <h3>沙朗牛排</h3>
-                        </div>
-                        <div class="menu_text">
-                            <br> 產地：澳洲or紐西蘭
-                            <br> 沙朗為肋骨上方的肉，外側通常有局部會被油脂所包覆，由於沙朗這一部位含油脂量較高，建議適合高熟度，如此才能夠品嘗到油脂經過確實烘烤，產生微焦時的焦糖反應，進而散發出來的濃厚奶香味！
-                            <br> 建議最佳熟度: 7分
-                            <br> ※須外加10%服務費(外帶則需加10%餐具費用)
-                            <br> 售價：298元
-                        </div>
+                    <a href="/images/b3.jpg " data-lightbox="image-1" data-title="沙朗牛排">
+                        <img width="100%" src="/images/c1.jpg" alt="">
+                    </a>
+                    <div class="menu_title">
+                        <h3>沙朗牛排</h3>
                     </div>
-                    <div class="col-6">
-                            <a href="/images/b4.jpg " data-lightbox="image-1" data-title="菲力牛排">
-                                <img width="100%" src="/images/c4.jpg" alt="">
-                            </a>
-                            <div class="menu_title">
-                                <h3>菲力牛排</h3>
-                            </div>
-                            <div class="menu_text">
-                                <br> 產地：澳洲or紐西蘭
-                                <br> 特色：位於牛隻的前腰脊部位，牛肉中最柔嫩的部位，該部位幾乎不帶油脂，肉質軟嫩多汁，也因此適合低熟度，最適合想要品嘗飽滿肉汁鮮嫩口感的您！
-                                <br> 建議最佳熟度: 5分
-                                <br> ※須外加10%服務費(外帶則需加10%餐具費用)
-                                <br> 售價：340元
-                            </div>
-                        </div>
-                        <div class="col-6">
-                                <a href="/images/b5.jpg " data-lightbox="image-1" data-title="無骨牛小排">
-                                    <img width="100%" src="/images/c3.jpg" alt="">
-                                </a>
-                                <div class="menu_title">
-                                    <h3>無骨牛小排</h3>
-                                </div>
-                                <div class="menu_text">
-                                    <br> 產地：美國自然牛
-                                    <br> 特色：牛小排擁有極為大量且豐富的油花，同時具有相當濃厚的牛肉原味，烹調上需要相當長時間並且精準的掌控火侯，如此即可適當的逼出油脂同時保有Q彈之口感!同時，長時間的烹煮可將所有的美味與湯汁給通通濃縮在肉裡，因此所需烹烤時間會比腓力與沙朗來的久，但是牛小排本身獨特的彈牙口感與濃厚的鮮甜肉味，則是與腓力與沙朗完全不同方式的享受!
-                                    <br> 建議最佳熟度: 全熟
-                                    <br> ※須外加10%服務費(外帶則需加10%餐具費用)
-                                    <br> 售價：420元
-                                </div>
-                            </div>
-        </div>
+                    <div class="menu_text">
+                        <br> 產地：澳洲or紐西蘭
+                        <br> 沙朗為肋骨上方的肉，外側通常有局部會被油脂所包覆，由於沙朗這一部位含油脂量較高，建議適合高熟度，如此才能夠品嘗到油脂經過確實烘烤，產生微焦時的焦糖反應，進而散發出來的濃厚奶香味！
+                        <br> 建議最佳熟度: 7分
+                        <br> ※須外加10%服務費(外帶則需加10%餐具費用)
+                        <br> 售價：298元
+                    </div>
+                </div>
+                <div class="col-6">
+                    <a href="/images/b4.jpg " data-lightbox="image-1" data-title="菲力牛排">
+                        <img width="100%" src="/images/c4.jpg" alt="">
+                    </a>
+                    <div class="menu_title">
+                        <h3>菲力牛排</h3>
+                    </div>
+                    <div class="menu_text">
+                        <br> 產地：澳洲or紐西蘭
+                        <br> 特色：位於牛隻的前腰脊部位，牛肉中最柔嫩的部位，該部位幾乎不帶油脂，肉質軟嫩多汁，也因此適合低熟度，最適合想要品嘗飽滿肉汁鮮嫩口感的您！
+                        <br> 建議最佳熟度: 5分
+                        <br> ※須外加10%服務費(外帶則需加10%餐具費用)
+                        <br> 售價：340元
+                    </div>
+                </div>
+                <div class="col-6">
+                    <a href="/images/b5.jpg " data-lightbox="image-1" data-title="無骨牛小排">
+                        <img width="100%" src="/images/c3.jpg" alt="">
+                    </a>
+                    <div class="menu_title">
+                        <h3>無骨牛小排</h3>
+                    </div>
+                    <div class="menu_text">
+                        <br> 產地：美國自然牛
+                        <br> 特色：牛小排擁有極為大量且豐富的油花，同時具有相當濃厚的牛肉原味，烹調上需要相當長時間並且精準的掌控火侯，如此即可適當的逼出油脂同時保有Q彈之口感!同時，長時間的烹煮可將所有的美味與湯汁給通通濃縮在肉裡，因此所需烹烤時間會比腓力與沙朗來的久，但是牛小排本身獨特的彈牙口感與濃厚的鮮甜肉味，則是與腓力與沙朗完全不同方式的享受!
+                        <br> 建議最佳熟度: 全熟
+                        <br> ※須外加10%服務費(外帶則需加10%餐具費用)
+                        <br> 售價：420元
+                    </div>
+                </div>
+            </div>
 
-        <script src="/js/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-            crossorigin="anonymous"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script>
-            lightbox.option({
-                'resizeDuration': 200,
-                'wrapAround': true
-            })
-        </script>
+            <script src="/js/jquery-3.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+                crossorigin="anonymous"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/lightbox.min.js"></script>
+            <script>
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true
+                })
+            </script>
 </body>
 
 </html>
