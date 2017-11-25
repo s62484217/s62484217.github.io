@@ -518,7 +518,7 @@ a:active {
 	float: left;
 }
 
-.2_meals {
+/* .2_meals { 
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
@@ -539,7 +539,7 @@ a:active {
 }
 .2_meals a:active{
 	color: #ff0000;
-}
+}*/
 
 /*內容區--餐點清單*/
 .mealsLook {
