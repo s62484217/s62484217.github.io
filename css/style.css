@@ -155,7 +155,8 @@ a{
 }
 
 .cus_footer{
-    background-color:rgb(56, 53, 53);
+    background-color:rgba(255, 255, 255, 0.068);
+    position: relative;
 }
 
 .address{
@@ -173,9 +174,36 @@ a{
 
 .ft_bg{
     width: 100%;
-
 }
 
+.social{
+    display: flex;
+    position: absolute;
+    top:45%;
+}
+
+.social a {
+    position: relative;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    padding-top: 18px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.youtube{
+    margin-left:500px; 
+}
+
+.social b {
+    font-size: 13px;
+    width: auto;
+}
 
 @keyframes fadin{
     0% {
