@@ -35,17 +35,6 @@
             width: 100%;
         }
 
-        #btn1{
-            height: 100px;
-            width: 100px;
-            background-color: red;
-        }
-
-        #btn2{
-            height: 100px;
-            width: 100px;
-            background-color: blue;
-        }
     </style>
 </head>
 
@@ -131,10 +120,10 @@
                             請選擇地區
                         </button>
                         <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">公益店</a>
-                            <a class="dropdown-item" href="#">崇德店</a>
-                            <a class="dropdown-item" href="#">逢甲店</a>
-                            <a class="dropdown-item" href="#">高雄店</a>
+                            <a class="gonyi" href="#">公益店</a>
+                            <a class="chonde" href="#">崇德店</a>
+                            <a class="fengjia" href="#">逢甲店</a>
+                            <a class="kaohsiung" href="#">高雄店</a>
                         </div>
                     </div>
                 </div>
@@ -142,30 +131,18 @@
         </div>
     </div>
 
-    <button id="btn1" type=""></button>
-    <button id="btn2" type=""></button>
-
     <div id="map"></div>
     <script>
-        function initMap(loc=0) {
+        function initMap(loc = 0) {
             // Styles a map in night mode.
             var locations = [
-                ['test', 24.1724095, 120.6852168, 0],
+                ['init', 24.1724095, 120.6852168, 0],
                 ['chonde', 24.1724095, 120.6852168, 1],
                 ['gonyi', 24.1507766, 120.6499019, 2],
+                ['fengjia', 24.1758985, 120.64537, 3],
+                ['kaohsiung', 22.6632087, 120.3035193, 4],
             ];
 
-            // function plotMap(loc) {
-            //     var mapOptions = {
-            //         zoom: 16,
-            //         center: new google.maps.LatLng((locations[loc][1]), (locations[loc][2])),
-                    
-            //         stylers: [
-            //             { saturation: -100 } // <-- THIS
-            //         ]
-            //     };
-            // }
-            
             //var uluru = { lat: 24.1724095, lng: 120.6852168 };
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: locations[loc][1], lng: locations[loc][2] },
@@ -251,9 +228,9 @@
                     }
                 ]
             });
-            
+
             var marker = new google.maps.Marker({
-                position: { lat: locations[loc][1], lng: locations[loc][2]},
+                position: { lat: locations[loc][1], lng: locations[loc][2] },
                 map: map
             });
             // function changr_map() {
@@ -272,15 +249,26 @@
     <script src="js/swiper.min.js"></script>
 
     <script>
-        $('#btn1').click(function () {
+        $('.chonde').click(function () {
             initMap(1);
             google.maps.event.trigger(map, 'resize');
         });
 
-        $('#btn2').click(function () {
+        $('.gonyi').click(function () {
             initMap(2);
             google.maps.event.trigger(map, 'resize');
         });
+
+        $('.fengjia').click(function () {
+            initMap(3);
+            google.maps.event.trigger(map, 'resize');
+        });
+
+        $('.kaohsiung').click(function () {
+            initMap(4);
+            google.maps.event.trigger(map, 'resize');
+        });
+
     </script>
 
 
