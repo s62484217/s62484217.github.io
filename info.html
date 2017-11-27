@@ -34,7 +34,6 @@
             height: 400px;
             width: 100%;
         }
-
     </style>
 </head>
 
@@ -113,22 +112,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            請選擇地區
-                        </button>
-                        <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="gonyi" href="#">公益店</a>
-                            <a class="chonde" href="#">崇德店</a>
-                            <a class="fengjia" href="#">逢甲店</a>
-                            <a class="kaohsiung" href="#">高雄店</a>
-                        </div>
-                    </div>
-                </div>
+
+                <select id="mySelect" onchange="myFunction()">
+                    <option value="gonyi">公益店
+                        <option value="chonde">崇德店
+                            <option value="fengjia">逢甲店
+                                <option value="kaohsiung">高雄店
+                </select>
             </div>
         </div>
+    </div>
     </div>
 
     <div id="map"></div>
@@ -245,29 +238,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/unslider-min.js"></script>
     <script src="js/swiper.min.js"></script>
 
     <script>
-        $('.chonde').click(function () {
-            initMap(1);
-            google.maps.event.trigger(map, 'resize');
-        });
-
-        $('.gonyi').click(function () {
-            initMap(2);
-            google.maps.event.trigger(map, 'resize');
-        });
-
-        $('.fengjia').click(function () {
-            initMap(3);
-            google.maps.event.trigger(map, 'resize');
-        });
-
-        $('.kaohsiung').click(function () {
-            initMap(4);
-            google.maps.event.trigger(map, 'resize');
-        });
+        function myFunction() {
+            var x = document.getElementById("mySelect").value;
+            console.log(x);
+            switch (x) {
+                case 'chonde':
+                    initMap(1);
+                    google.maps.event.trigger(map, 'resize');
+                    break;
+                case 'gonyi':
+                    initMap(2);
+                    google.maps.event.trigger(map, 'resize');
+                    break;
+                case 'fengjia':
+                    initMap(3);
+                    google.maps.event.trigger(map, 'resize');
+                    break;
+                case 'kaohsiung':
+                    initMap(4);
+                    google.maps.event.trigger(map, 'resize');
+                    break;
+                default:
+                    initMap(0);
+                    google.maps.event.trigger(map, 'resize');
+            }
+        }
 
     </script>
 
