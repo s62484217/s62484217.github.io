@@ -34,6 +34,18 @@
             height: 400px;
             width: 100%;
         }
+
+        #btn1{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+        #btn2{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
     </style>
 </head>
 
@@ -130,30 +142,33 @@
         </div>
     </div>
 
+    <button id="btn1" type=""></button>
+    <button id="btn2" type=""></button>
+
     <div id="map"></div>
     <script>
-        function initMap() {
+        function initMap(loc=0) {
             // Styles a map in night mode.
             var locations = [
-                ['test', 22, 120, 0],
+                ['test', 24.1724095, 120.6852168, 0],
                 ['chonde', 24.1724095, 120.6852168, 1],
                 ['gonyi', 24.1507766, 120.6499019, 2],
             ];
 
-            function plotMap(loc) {
-                var mapOptions = {
-                    zoom: 16,
-                    center: new google.maps.LatLng((locations[loc][1]), (locations[loc][2])),
+            // function plotMap(loc) {
+            //     var mapOptions = {
+            //         zoom: 16,
+            //         center: new google.maps.LatLng((locations[loc][1]), (locations[loc][2])),
                     
-                    stylers: [
-                        { saturation: -100 } // <-- THIS
-                    ]
-                };
-            }
+            //         stylers: [
+            //             { saturation: -100 } // <-- THIS
+            //         ]
+            //     };
+            // }
             
-            var uluru = { lat: 24.1724095, lng: 120.6852168 };
+            //var uluru = { lat: 24.1724095, lng: 120.6852168 };
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: locations,
+                center: { lat: locations[loc][1], lng: locations[loc][2] },
                 zoom: 16,
                 styles: [
                     { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
@@ -236,29 +251,16 @@
                     }
                 ]
             });
+            
             var marker = new google.maps.Marker({
-                position: uluru,
+                position: { lat: locations[loc][1], lng: locations[loc][2]},
                 map: map
             });
-
-
-            $('#dropdown-menu').click(function () {
-                plotMap(1);
-                google.maps.event.trigger(map, 'resize');
-            });
-            $('#dropdown-menu').click(function () {
-                plotMap(2);
-                google.maps.event.trigger(map, 'resize');
-            });
-            plotMap(0);
-
-
             // function changr_map() {
             //     var text_a = document.querySelector('#dropdown-menu');
             //     text_a.classList.toggle('active');
             // }
         }
-
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-uLrP8kGE9VjY3Wx7yPJzn58FrpeHsg4&callback=initMap">
     </script>
@@ -268,6 +270,18 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/unslider-min.js"></script>
     <script src="js/swiper.min.js"></script>
+
+    <script>
+        $('#btn1').click(function () {
+            initMap(1);
+            google.maps.event.trigger(map, 'resize');
+        });
+
+        $('#btn2').click(function () {
+            initMap(2);
+            google.maps.event.trigger(map, 'resize');
+        });
+    </script>
 
 
 
