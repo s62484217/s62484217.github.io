@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <style>
-    </style>
-</head>
-
+<html>
 <body>
-      
 
-    <script src="js/bootstrap.js"></script>
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="">請選擇區域
+  <option value="Audi">公益店
+  <option value="BMW">崇德店
+  <option value="Mercedes">逢甲店
+  <option value="Volvo">高雄店
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+
 </body>
-
 </html>
