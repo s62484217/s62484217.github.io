@@ -221,3 +221,7 @@ a{
     left: 50%;
     transform: translate(-40% , -50%);
 }
+
+.fa-2x {
+    color: white;
+}
