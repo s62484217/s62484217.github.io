@@ -86,7 +86,16 @@
         }
 
         #mssbox {
+            /* display: none; */
+        }
+
+        #video {
             display: none;
+        }
+
+        #mssbox.show,
+        #video.show {
+            display: block;
         }
 
         .left {
@@ -124,7 +133,8 @@
         .split {
             color: white;
         }
-        .line{
+
+        .line {
             position: relative;
             padding: 10px 0 30px;
             margin-bottom: 25px;
@@ -183,12 +193,12 @@
         <div class="info_title line">
             <div class="container">
                 <h2>
-                    <strong>Store</strong>
+                    <strong>What's New</strong>
                     <em class="split">
-                        <span>分</span>
-                        <span>店</span>
-                        <span>查</span>
-                        <span>詢</span>
+                        <span>最</span>
+                        <span>/新</span>
+                        <span>/消</span>
+                        <span>/息</span>
                     </em>
                 </h2>
             </div>
@@ -324,7 +334,14 @@
     <script>
         var discount = document.querySelector('#mssbox');
         function clickhidemessage() {
-            discount.classList.add('hide');
+            discount.classList.add('show');
+            news.classList.remove('show');
+        }
+
+        var news = document.querySelector('#video');
+        function clickhidemessage() {
+            news.classList.add('show');
+            discount.classList.remove('show');
         }
 
         var chonte = document.querySelector('#news_chon');
