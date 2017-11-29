@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/lightbox.css">
@@ -34,6 +33,102 @@
             width: 100%;
             margin-top: 90.77px;
             background-image: url('imgs/bgf.png');
+        }
+
+        .news_titel {
+            margin-top: 50px;
+        }
+
+        .discount {
+            background-color: red;
+            border-radius: 5px;
+            width: 50%;
+            margin: 0 auto;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .report {
+            background-color: rgb(223, 67, 20);
+            border-radius: 5px;
+            width: 50%;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        .raise104 {
+            background-color: rgb(223, 67, 20);
+            border-radius: 5px;
+            width: 50%;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        .content {
+            margin-top: 30px;
+        }
+
+        .card-body {
+            background-color: #111;
+            color: rgb(158, 17, 17);
+        }
+
+        .card_246 {
+            color: rgb(216, 216, 8);
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        #mssbox {
+            display: none;
+        }
+
+        .left {
+            line-height: 50px;
+            border-bottom: 1px rgb(236, 5, 5) solid;
+            cursor: pointer;
+        }
+
+        #news_chon,
+        #news_fe,
+        #news_ton,
+        #news_tvbs,
+        #news_tonight {
+            display: none;
+        }
+
+        #news_chon.show,
+        #news_fe.show,
+        #news_ton.show,
+        #news_tvbs.show,
+        #news_tonight.show {
+            display: block;
+        }
+
+        .info_title {
+            margin-top: 90.7px;
+        }
+
+        strong {
+            font-size: 65px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .split {
+            color: white;
+        }
+        .line{
+            position: relative;
+            padding: 10px 0 30px;
+            margin-bottom: 25px;
+            border-bottom: 4px solid #868686;
         }
     </style>
 
@@ -67,7 +162,7 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/info.html">
                             <div class="logo_gh"></div>店家資訊
                             <span class="sr-only">(current)</span>
                         </a>
@@ -84,127 +179,131 @@
             </div>
         </div>
     </nav>
-
-    <!-- <div class="row"> 
-        <div class="col-6">
-            <a href="/images/b1.jpg " data-lightbox="image-1" data-title="炙烤豬排">
-                <img width="100%" src="/images/c2.jpg" alt="">
-            </a>
-            <div class="menu_title">
-                <h3>炙烤豬排</h3>
-            </div>
-            <div class="menu_text">
-                <br> 產地：台灣特選CAS豬肉
-                <br> 特色：肉質紮實、香氣十足！
-                <br> 建議最佳熟度: 全熟
-                <br> ※須外加10%服務費(外帶則需加10%餐具費用)
-                <br> 售價：280元
-            </div>
-        </div> -->
-
-
-
-
-    <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-
-
-    <!--內容區 Start -->
-    <div id="content">
-        <div class="Subject">電子媒體報導</div>
-        <iframe src="video/video_1.html" width="784" height="361" scrolling="no" frameborder="0" class="videoBox"></iframe>
-        <div class="Subject">平面媒體報導</div>
-        <div class="mgz">
-            <div class="mgz_name">商周報導2010_1162期</div>
-            <div class="mgzImg_L">
-                <img src="images/recommend/Mgz_01.jpg" />
+    <div class="container">
+        <div class="info_title line">
+            <div class="container">
+                <h2>
+                    <strong>Store</strong>
+                    <em class="split">
+                        <span>分</span>
+                        <span>店</span>
+                        <span>查</span>
+                        <span>詢</span>
+                    </em>
+                </h2>
             </div>
         </div>
-        <div class="mgz">
-            <div class="mgz_name">壹週刊 2010年10月21號</div>
-            <div class="mgzImg_L">
-                <img src="images/recommend/Mgz_02.jpg" />
-            </div>
-        </div>
-        <div class="mgzS">
-            <div class="mgzSbox">
-                <div class="mgz_name">Taiwan Jourmal_27_July_2007</div>
-                <div class="mgzimg_s">
-                    <img src="images/recommend/Mgz_03.jpg" />
+
+        <div class="news_titel">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="discount" onclick="clickhidemessage()">優惠訊息</div>
                 </div>
-            </div>
-            <div class="mgzSbox">
-                <div class="mgz_name">日本旅遊雜誌報導</div>
-                <div class="mgzImg_s">
-                    <img src="images/recommend/Mgz_04.jpg" />
+                <div class="col-sm">
+                    <div class="report">媒體報導</div>
                 </div>
-            </div>
-            <div class="mgzSbox_m0">
-                <div class="mgz_name">時報週刊2008美食鑑定人氣50店</div>
-                <div class="mgzImg_s">
-                    <img src="images/recommend/Mgz_05.jpg" />
+                <div class="col-sm">
+                    <div class="raise104">人才招募</div>
                 </div>
             </div>
         </div>
+        <div class="content">
+            <div id="mssbox">
+                <div class="row">
+                    <div class="col col-xl-4">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/imgs/card_1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">拚了!免費吃牛排</h4>
+                                <p class="card-text">刷華南銀行美饌紅利卡，免費請您吃牛排</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/imgs/card_2.png" alt="Card image cap">
+                            <div class="card-body card_246">
+                                <h4 class="card-title">新品上市-炙烤豬肋排</h4>
+                                <p class="card-text">■炙烤豬肋排 ■越光米飯/馬鈴薯 二選一</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/imgs/card_3.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">中秋烤肉-最牛逼</h4>
+                                <p class="card-text">赤鬼職人推薦的嚴選優質牛小排肉品!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/imgs/card_1.jpg" alt="Card image cap">
+                            <div class="card-body card_246">
+                                <h4 class="card-title">拚了!免費吃牛排</h4>
+                                <p class="card-text">刷華南銀行美饌紅利卡，免費請您吃牛排</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/imgs/card_2.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">新品上市-炙烤豬肋排</h4>
+                                <p class="card-text">■炙烤豬肋排 ■越光米飯/馬鈴薯 二選一</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/imgs/card_3.png" alt="Card image cap">
+                            <div class="card-body card_246">
+                                <h4 class="card-title">中秋烤肉-最牛逼</h4>
+                                <p class="card-text">赤鬼職人推薦的嚴選優質牛小排肉品!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div class="Subject">網友推薦</div>
-        <div class="blogbox">
-            <div class="blogimg">
-                <img src="images/recommend/blog_01.jpg" />
-            </div>
-            <div class="blogtxt">
-                網友推薦：
-                <br/> 有沒有被外觀給吸引阿，有不少～鬼耶.....(哈)，相信很多人一看到這外觀，就會覺得裡頭的價位，應該"不俗"吧(因為龍妹也這樣認為～哈)，但是呢～，吃過的人告訴我，這家是走牛排界的平價平價路線...
-                <br/> 原文出處：
-                <span class="gold">http://lmmgogogo.pixnet.net/blog/post/8393374</span>
+        <div class="content">
+            <div id="video">
+                <div class="row">
+                    <div class="col col-xl-4">
+                        <div class="row left" onclick="show_chonte()">中天新聞報導</div>
+                        <div class="row left" onclick="show_fefang()">非凡新聞</div>
+                        <div class="row left" onclick="show_tonshen()">東森新聞</div>
+                        <div class="row left" onclick="show_tvbs()">TVBS新聞</div>
+                        <div class="row left" onclick="show_today()">今晚哪裡有問題</div>
+                    </div>
+                    <div class="col col-xl-8">
+                        <div id="news_chon">
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/Evr_8GwNYtY" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div id="news_fe">
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/f6Vnsb-knwg" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div id="news_ton">
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/yYWPoJLAdpY" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div id="news_tvbs">
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/elUKE49GXIk" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div id="news_tonight">
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/lHjT45XlaYU" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="blogbox">
-            <div class="blogimg">
-                <img src="images/recommend/blog_02.jpg" />
-            </div>
-            <div class="blogtxt">
-                網友推薦：
-                <br/> 吃牛排啦...要上平價牛排"館"...還是以赤鬼的比較有質感...
-                <br/> 有提供3樣配菜還有有玉米濃湯/羅宋湯...紅茶冷泡茶讓客喝到死...
-                <br/> 雖然現在漲到一份190元...但是要吃這種平價牛排還是赤鬼的比較優呀...
-                <br/> 原文出處：
-                <span class="gold">http://ourlife.pixnet.net/blog/post/36294850</span>
-            </div>
-        </div>
-        <!-- 紅底線+TOP -->
-        <div class="RedLine"></div>
-        <a href="#top">
-            <div class="topBt">TOP</div>
-        </a>
-        <div class="petsExp">請勿攜帶寵物進入</div>
+
+
     </div>
+
+
+
 
 
 
@@ -221,6 +320,58 @@
             'resizeDuration': 200,
             'wrapAround': true
         })
+    </script>
+    <script>
+        var discount = document.querySelector('#mssbox');
+        function clickhidemessage() {
+            discount.classList.add('hide');
+        }
+
+        var chonte = document.querySelector('#news_chon');
+        function show_chonte() {
+            chonte.classList.add('show');
+            fefang.classList.remove('show');
+            tonshen.classList.remove('show');
+            tvbs.classList.remove('show');
+            today.classList.remove('show');
+            console.log(1);
+        }
+        var fefang = document.querySelector('#news_fe');
+        function show_fefang() {
+            fefang.classList.add('show');
+            chonte.classList.remove('show');
+            tonshen.classList.remove('show');
+            tvbs.classList.remove('show');
+            today.classList.remove('show');
+            console.log(2);
+        }
+        var tonshen = document.querySelector('#news_ton');
+        function show_tonshen() {
+            tonshen.classList.add('show');
+            chonte.classList.remove('show');
+            fefang.classList.remove('show');
+            tvbs.classList.remove('show');
+            today.classList.remove('show');
+            console.log(3);
+        }
+        var tvbs = document.querySelector('#news_tvbs');
+        function show_tvbs() {
+            tvbs.classList.add('show');
+            chonte.classList.remove('show');
+            fefang.classList.remove('show');
+            tonshen.classList.remove('show');
+            today.classList.remove('show');
+            console.log(4);
+        }
+        var today = document.querySelector('#news_tonight');
+        function show_today() {
+            today.classList.add('show');
+            chonte.classList.remove('show');
+            fefang.classList.remove('show');
+            tonshen.classList.remove('show');
+            tvbs.classList.remove('show');
+            console.log(5);
+        }
     </script>
 </body>
 

@@ -179,7 +179,7 @@ a{
 .social{
     display: flex;
     position: absolute;
-    top:45%;
+    top:40%;
 }
 
 .social a {
@@ -194,10 +194,11 @@ a{
     border: 1px solid currentColor;
     border-radius: 50%;
     box-sizing: border-box;
+    margin-left: 15px;
 }
 
 .youtube{
-    margin-left:500px; 
+    margin-left:600px; 
 }
 
 .social b {
@@ -213,4 +214,10 @@ a{
     100% {
         opacity: 1;
     }
+}
+.social a .fa-facebook , .fa-instagram, .fa-youtube , .fa-envelope{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40% , -50%);
 }
