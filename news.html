@@ -36,7 +36,7 @@
         }
 
         .news_titel {
-            margin-top: 100px;
+            margin-top: 50px;
         }
 
         .discount {
@@ -77,7 +77,7 @@
             color: rgb(216, 216, 8);
         }
 
-        .show{
+        .show {
             display: block;
         }
 
@@ -89,18 +89,46 @@
             display: none;
         }
 
-        .left{
+        .left {
             line-height: 50px;
             border-bottom: 1px rgb(236, 5, 5) solid;
             cursor: pointer;
         }
 
-        #news_chon , #news_fe , #news_ton , #news_tvbs , #news_tonight{
+        #news_chon,
+        #news_fe,
+        #news_ton,
+        #news_tvbs,
+        #news_tonight {
             display: none;
         }
 
-         #news_chon.show , #news_fe.show , #news_ton.show , #news_tvbs.show , #news_tonight.show{
+        #news_chon.show,
+        #news_fe.show,
+        #news_ton.show,
+        #news_tvbs.show,
+        #news_tonight.show {
             display: block;
+        }
+
+        .info_title {
+            margin-top: 90.7px;
+        }
+
+        strong {
+            font-size: 65px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .split {
+            color: white;
+        }
+        .line{
+            position: relative;
+            padding: 10px 0 30px;
+            margin-bottom: 25px;
+            border-bottom: 4px solid #868686;
         }
     </style>
 
@@ -152,6 +180,19 @@
         </div>
     </nav>
     <div class="container">
+        <div class="info_title line">
+            <div class="container">
+                <h2>
+                    <strong>Store</strong>
+                    <em class="split">
+                        <span>分</span>
+                        <span>店</span>
+                        <span>查</span>
+                        <span>詢</span>
+                    </em>
+                </h2>
+            </div>
+        </div>
 
         <div class="news_titel">
             <div class="row">
@@ -239,19 +280,19 @@
                     </div>
                     <div class="col col-xl-8">
                         <div id="news_chon">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Evr_8GwNYtY" frameborder="0" allowfullscreen></iframe>
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/Evr_8GwNYtY" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_fe">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/f6Vnsb-knwg" frameborder="0" allowfullscreen></iframe>
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/f6Vnsb-knwg" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_ton">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yYWPoJLAdpY" frameborder="0" allowfullscreen></iframe>
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/yYWPoJLAdpY" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_tvbs">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/elUKE49GXIk" frameborder="0" allowfullscreen></iframe>
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/elUKE49GXIk" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_tonight">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lHjT45XlaYU" frameborder="0" allowfullscreen></iframe>
+                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/lHjT45XlaYU" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -287,30 +328,50 @@
         }
 
         var chonte = document.querySelector('#news_chon');
-            function show_chonte() {
-                chonte.classList.add('show');
-                console.log(1);
-            }
+        function show_chonte() {
+            chonte.classList.add('show');
+            fefang.classList.remove('show');
+            tonshen.classList.remove('show');
+            tvbs.classList.remove('show');
+            today.classList.remove('show');
+            console.log(1);
+        }
         var fefang = document.querySelector('#news_fe');
-            function show_fefang() {
-                fefang.classList.add('show');
-                console.log(2);
-            }
+        function show_fefang() {
+            fefang.classList.add('show');
+            chonte.classList.remove('show');
+            tonshen.classList.remove('show');
+            tvbs.classList.remove('show');
+            today.classList.remove('show');
+            console.log(2);
+        }
         var tonshen = document.querySelector('#news_ton');
-            function show_tonshen() {
-                tonshen.classList.add('show');
-                console.log(3);
-            }
+        function show_tonshen() {
+            tonshen.classList.add('show');
+            chonte.classList.remove('show');
+            fefang.classList.remove('show');
+            tvbs.classList.remove('show');
+            today.classList.remove('show');
+            console.log(3);
+        }
         var tvbs = document.querySelector('#news_tvbs');
-            function show_tvbs() {
-                tvbs.classList.add('show');
-                console.log(4);
-            }
+        function show_tvbs() {
+            tvbs.classList.add('show');
+            chonte.classList.remove('show');
+            fefang.classList.remove('show');
+            tonshen.classList.remove('show');
+            today.classList.remove('show');
+            console.log(4);
+        }
         var today = document.querySelector('#news_tonight');
-            function show_today() {
-                today.classList.add('show');
-                console.log(5);
-            }
+        function show_today() {
+            today.classList.add('show');
+            chonte.classList.remove('show');
+            fefang.classList.remove('show');
+            tonshen.classList.remove('show');
+            tvbs.classList.remove('show');
+            console.log(5);
+        }
     </script>
 </body>
 
