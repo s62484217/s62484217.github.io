@@ -244,7 +244,7 @@ a {
 
 @media Screen and (max-width: 960px) {
     .top {
-        background-image: url("../mobile/title_bg_mobile.png");
+        background-image: url("../mobile/title_bg_mobile.jpg");
     }
     .logo_center {
         width: 350px;
