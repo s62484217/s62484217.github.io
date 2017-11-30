@@ -104,7 +104,6 @@
             cursor: pointer;
         }
 
-        #news_chon,
         #news_fe,
         #news_ton,
         #news_tvbs,
@@ -112,12 +111,19 @@
             display: none;
         }
 
-        #news_chon.show,
         #news_fe.show,
         #news_ton.show,
         #news_tvbs.show,
         #news_tonight.show {
             display: block;
+        }
+
+        #news_chon.show{
+            display: block;
+        }
+
+        #news_chon.hide{
+            display: none;
         }
 
         .info_title {
@@ -380,6 +386,7 @@
         var chonte = document.querySelector('#news_chon');
         function show_chonte() {
             chonte.classList.add('show');
+            chonte.classList.remove('hide');
             fefang.classList.remove('show');
             tonshen.classList.remove('show');
             tvbs.classList.remove('show');
@@ -394,6 +401,7 @@
         var fefang = document.querySelector('#news_fe');
         function show_fefang() {
             fefang.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             tonshen.classList.remove('show');
             tvbs.classList.remove('show');
@@ -407,6 +415,7 @@
         var tonshen = document.querySelector('#news_ton');
         function show_tonshen() {
             tonshen.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             fefang.classList.remove('show');
             tvbs.classList.remove('show');
@@ -420,6 +429,7 @@
         var tvbs = document.querySelector('#news_tvbs');
         function show_tvbs() {
             tvbs.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             fefang.classList.remove('show');
             tonshen.classList.remove('show');
@@ -433,6 +443,7 @@
         var today = document.querySelector('#news_tonight');
         function show_today() {
             today.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             fefang.classList.remove('show');
             tonshen.classList.remove('show');
