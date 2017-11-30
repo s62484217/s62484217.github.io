@@ -41,25 +41,6 @@
             margin-top: 100px;
         }
 
-        .bg_menu_left {
-            height: 10vh;
-            width: 45%;
-            padding-bottom: 10px;
-            background-size: contain;
-            background-image: url('imgs/123.png');
-            float:left;
-
-        }
-
-        .bg_menu_right {
-            height: 10vh;
-            width: 45%;
-            padding-bottom: 10px;
-            background-size: contain;
-            background-image: url('imgs/123.png');
-            float:left;
-        }
-
         .title {
             font-size: 24px;
             color: #e98a17;
@@ -68,6 +49,29 @@
             font-family: 微軟正黑體;
             float:left;
         }
+        .info_title {
+            margin-top: 90.7px;
+        }
+
+        strong {
+            font-size: 65px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .split {
+            color: white;
+        }
+        .line{
+            position: relative;
+            padding: 10px 0 30px;
+            margin-bottom: 25px;
+            border-bottom: 4px solid #868686;
+        }
+        @media Screen and (max-width: 960px) {
+        .split {
+            display: none;
+        }}
     </style>
 
 </head>
@@ -117,18 +121,19 @@
             </div>
         </div>
     </nav>
-
-    <div class="container">
-        <div class="title_box">
-            <div class="bg_menu_left">
-            </div>
-            <div class="title">
-                美食饗宴
-            </div>
-            <div class="bg_menu_right">
-            </div>
-            <div style="clear:both;"></div>
+    <div class="info_title line">
+        <div class="container">
+            <h2>
+                <strong>美食饗宴</strong>
+                <em class="split">
+                    <span>M</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>U</span>
+                </em>
+            </h2>
         </div>
+    </div>
         <br>
         <br>
         <br>
