@@ -240,3 +240,24 @@ a {
 .fa-2x:hover {
     color: rgb(25, 74, 211);
 }
+
+
+/* 1180平板板 */
+
+@media Screen and (max-width: 1180px) {
+    .l4_margin {
+        margin-left: 0;
+    }
+}
+
+
+/* 960手機板 */
+
+@media Screen and (max-width: 960px) {
+    .top {
+        background-image: url("../mobile/title_bg_mobile.png");
+    }
+    .logo_center {
+        width: 350px;
+    }
+}
