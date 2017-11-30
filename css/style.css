@@ -252,4 +252,10 @@ a {
     .un_img {
         width: 100%;
     }
+    .web_footer{
+        display: none;
+    }
+    .mobile_footer{
+        display: block;
+    }
 }
