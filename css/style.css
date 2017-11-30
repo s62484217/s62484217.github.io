@@ -1,5 +1,4 @@
 body {
-
     background-color: black;
 }
 
@@ -222,6 +221,7 @@ a {
         opacity: 1;
     }
 }
+
 .fa-2x {
     color: white;
 }
@@ -248,5 +248,8 @@ a {
     }
     .logo_center {
         width: 350px;
+    }
+    .un_img {
+        width: 100%;
     }
 }
