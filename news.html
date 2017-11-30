@@ -40,12 +40,16 @@
         }
 
         .discount {
-            background-color: red;
+            background-color: rgb(223, 67, 20);
             border-radius: 5px;
             width: 50%;
             margin: 0 auto;
             font-size: 16px;
             cursor: pointer;
+        }
+
+        .discount:hover{
+            background-color: red;
         }
 
         .report {
@@ -54,6 +58,7 @@
             width: 50%;
             margin: 0 auto;
             font-size: 16px;
+            cursor: pointer;
         }
 
         .raise104 {
@@ -85,18 +90,18 @@
             display: none;
         }
 
-        #mssbox {
+        #video{
             display: none;
         }
 
-        #video {
-            /* display: none; */
+        #mssbox.show {
+            display: block;
         }
 
-        #mssbox.show,
         #video.show {
             display: block;
         }
+
 
         .left {
             line-height: 50px;
@@ -213,10 +218,10 @@
         <div class="news_titel">
             <div class="row">
                 <div class="col-sm">
-                    <div class="discount" onclick="clickhidemessage()">優惠訊息</div>
+                    <div class="discount" onclick="clickhidevideo()">優惠訊息</div>
                 </div>
                 <div class="col-sm">
-                    <div class="report">媒體報導</div>
+                    <div class="report" onclick="clickhidemessage()">媒體報導</div>
                 </div>
                 <div class="col-sm">
                     <div class="raise104">人才招募</div>
@@ -373,14 +378,15 @@
     <script>
         var discount = document.querySelector('#mssbox');
         function clickhidemessage() {
-            discount.classList.add('show');
-            news.classList.remove('show');
-        }
-
-        var news = document.querySelector('#video');
-        function clickhidemessage() {
             news.classList.add('show');
             discount.classList.remove('show');
+        }
+
+        var video = document.querySelector('#video');
+        function clickhidevideo() {
+            video.classList.add('show');
+            discount.classList.remove('show');
+
         }
 
         var chonte = document.querySelector('#news_chon');
