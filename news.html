@@ -238,7 +238,7 @@
                             <img class="card-img-top" src="/imgs/card_1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">拚了!免費吃牛排</h4>
-                                <p class="card-text">刷華南銀行美饌紅利卡，免費請您吃牛排</p>
+                                <p class="card-text">刷華南銀行美饌紅利卡，免費請吃牛排</p>
                             </div>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                             <img class="card-img-top" src="/imgs/card_1.jpg" alt="Card image cap">
                             <div class="card-body card_246">
                                 <h4 class="card-title">拚了!免費吃牛排</h4>
-                                <p class="card-text">刷華南銀行美饌紅利卡，免費請您吃牛排</p>
+                                <p class="card-text">刷華南銀行美饌紅利卡，免費請吃牛排</p>
                             </div>
                         </div>
                     </div>
@@ -380,15 +380,13 @@
     <script>
         var discount = document.querySelector('#mssbox');
         function clickhidemessage() {
-            news.classList.add('show');
+            video.classList.add('show');
             discount.classList.remove('show');
         }
 
         var video = document.querySelector('#video');
         function clickhidevideo() {
-            video.classList.add('show');
-            discount.classList.remove('show');
-
+            discount.classList.toggle('hide');
         }
 
         var chonte = document.querySelector('#news_chon');
