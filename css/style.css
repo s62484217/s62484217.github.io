@@ -91,10 +91,10 @@ a {
     content: attr(data-content);
     position: relative;
     display: inline-block;
-    color: black;
+    color: #faf1af;
     padding: 0 .5em;
     line-height: 1.5em;
-    background-color: #fcfcfa;
+    background-color: black;
 }
 
 .swiper-slide {
