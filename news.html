@@ -40,7 +40,7 @@
         }
 
         .discount {
-            background-color: red;
+            background-color: rgb(223, 67, 20);
             border-radius: 5px;
             width: 50%;
             margin: 0 auto;
@@ -48,12 +48,19 @@
             cursor: pointer;
         }
 
+        .discount:hover,.report:hover,.raise104{
+            background-color: red;
+            animation: fadin 1s 1;
+        }
+
         .report {
             background-color: rgb(223, 67, 20);
+            color:white;
             border-radius: 5px;
             width: 50%;
             margin: 0 auto;
             font-size: 16px;
+            cursor: pointer;
         }
 
         .raise104 {
@@ -85,9 +92,18 @@
             display: none;
         }
 
-        #mssbox {
+        #mssbox , #video{
             display: none;
         }
+
+        #mssbox.show {
+            display: block;
+        }
+
+        #video.show {
+            display: block;
+        }
+
 
         .left {
             line-height: 50px;
@@ -95,7 +111,6 @@
             cursor: pointer;
         }
 
-        #news_chon,
         #news_fe,
         #news_ton,
         #news_tvbs,
@@ -103,12 +118,19 @@
             display: none;
         }
 
-        #news_chon.show,
         #news_fe.show,
         #news_ton.show,
         #news_tvbs.show,
         #news_tonight.show {
             display: block;
+        }
+
+        #news_chon.show{
+            display: block;
+        }
+
+        #news_chon.hide{
+            display: none;
         }
 
         .info_title {
@@ -124,12 +146,17 @@
         .split {
             color: white;
         }
-        .line{
+
+        .line {
             position: relative;
             padding: 10px 0 30px;
             margin-bottom: 25px;
             border-bottom: 4px solid #868686;
         }
+        @media Screen and (max-width: 960px) {
+        .split {
+            display: none;
+        }}
     </style>
 
 </head>
@@ -169,7 +196,7 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/about.html">
                             <div class="logo_gh"></div>關於赤鬼
                             <span class="sr-only">(current)</span>
                         </a>
@@ -183,12 +210,12 @@
         <div class="info_title line">
             <div class="container">
                 <h2>
-                    <strong>Store</strong>
+                    <strong>What's New</strong>
                     <em class="split">
-                        <span>分</span>
-                        <span>店</span>
-                        <span>查</span>
-                        <span>詢</span>
+                        <span>最</span>
+                        <span>新</span>
+                        <span>消</span>
+                        <span>息</span>
                     </em>
                 </h2>
             </div>
@@ -197,25 +224,27 @@
         <div class="news_titel">
             <div class="row">
                 <div class="col-sm">
-                    <div class="discount" onclick="clickhidemessage()">優惠訊息</div>
+                    <div class="discount" onclick="clickhidevideo()">優惠訊息</div>
                 </div>
                 <div class="col-sm">
-                    <div class="report">媒體報導</div>
+                    <div class="report" onclick="clickhidemessage()">媒體報導</div>
                 </div>
                 <div class="col-sm">
+                    <a href="https://goo.gl/uiVtuA" target="_blank">
                     <div class="raise104">人才招募</div>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="content">
-            <div id="mssbox">
+            <div id="mssbox" class="show">
                 <div class="row">
                     <div class="col col-xl-4">
                         <div class="card" style="width: 20rem;">
                             <img class="card-img-top" src="/imgs/card_1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">拚了!免費吃牛排</h4>
-                                <p class="card-text">刷華南銀行美饌紅利卡，免費請您吃牛排</p>
+                                <p class="card-text">刷華南銀行美饌紅利卡，免費請吃牛排</p>
                             </div>
                         </div>
                     </div>
@@ -242,7 +271,7 @@
                             <img class="card-img-top" src="/imgs/card_1.jpg" alt="Card image cap">
                             <div class="card-body card_246">
                                 <h4 class="card-title">拚了!免費吃牛排</h4>
-                                <p class="card-text">刷華南銀行美饌紅利卡，免費請您吃牛排</p>
+                                <p class="card-text">刷華南銀行美饌紅利卡，免費請吃牛排</p>
                             </div>
                         </div>
                     </div>
@@ -271,28 +300,29 @@
         <div class="content">
             <div id="video">
                 <div class="row">
-                    <div class="col col-xl-4">
+                    <div class="col-12 col-xl-4">
                         <div class="row left" onclick="show_chonte()">中天新聞報導</div>
                         <div class="row left" onclick="show_fefang()">非凡新聞</div>
                         <div class="row left" onclick="show_tonshen()">東森新聞</div>
                         <div class="row left" onclick="show_tvbs()">TVBS新聞</div>
                         <div class="row left" onclick="show_today()">今晚哪裡有問題</div>
                     </div>
-                    <div class="col col-xl-8">
+                    <div class="col-12 col-xl-8">
                         <div id="news_chon">
-                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/Evr_8GwNYtY" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="yvideo" width="100%" height="315" src="https://www.youtube.com/embed/Evr_8GwNYtY?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_fe">
-                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/f6Vnsb-knwg" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="yvideo" width="100%" height="315" src="https://www.youtube.com/embed/f6Vnsb-knwg?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_ton">
-                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/yYWPoJLAdpY" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="yvideo" width="100%" height="315" src="https://www.youtube.com/embed/yYWPoJLAdpY?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_tvbs">
-                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/elUKE49GXIk" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="yvideo" width="100%" height="315" src="https://www.youtube.com/embed/elUKE49GXIk?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div id="news_tonight">
-                            <iframe id="myVideoClass" width="560" height="315" src="https://www.youtube.com/embed/lHjT45XlaYU" frameborder="0" allowfullscreen></iframe>
+                            <!-- 560 -->
+                            <iframe class="yvideo" width="100%" height="315" src="https://www.youtube.com/embed/lHjT45XlaYU?version=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -301,6 +331,46 @@
 
 
     </div>
+    <br><br><br>
+            <!--footer    巢狀網格  -->
+            <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12 col-md-6 f_text">
+                                <a href="https://zh-tw.facebook.com/akaonisteak/" target="_blank">
+                                    <i class="fa fa-facebook fa-2x"></i>
+                                </a>
+                            </div>
+                        <div class="col-12 col-md-6 f_text">
+                                <a href="https://www.instagram.com/explore/locations/255433257/" target="_blank">
+                                    <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 f_text">
+                        營業時間：11:00~23:00|關於赤鬼|最新消息|美食饗宴|店家資訊
+                        <br>© 2017 赤鬼食品有限公司. All Rights Reserved.網站設計: 右邊第三排
+                    </div>
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12 col-md-6 f_text">
+                                <a href="https://www.youtube.com/channel/UCcTdev1h9L40bEB-P2mC2wA" target="_blank">
+                                    <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+    
+                            <div class="col-12 col-md-6 f_text">
+                                <a href="https://zh-tw.facebook.com/akaonisteak/" target="_blank">
+                                    <i class="fa fa-envelope fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+
+    <img class="ft_bg" src="imgs/footer_bg.png" alt="">
 
 
 
@@ -324,53 +394,89 @@
     <script>
         var discount = document.querySelector('#mssbox');
         function clickhidemessage() {
-            discount.classList.add('hide');
+            video.classList.remove('show');
+            console.log(discount);
+            discount.classList.remove('show');
+            video.classList.add('show');
+        }
+
+        var video = document.querySelector('#video');
+        function clickhidevideo() {
+            video.classList.remove('show');
+            discount.classList.remove('show');
+            discount.classList.add('show');
         }
 
         var chonte = document.querySelector('#news_chon');
         function show_chonte() {
             chonte.classList.add('show');
+            chonte.classList.remove('hide');
             fefang.classList.remove('show');
             tonshen.classList.remove('show');
             tvbs.classList.remove('show');
             today.classList.remove('show');
             console.log(1);
+
+             $('.yvideo').each(function () {
+                 console.log($(this));
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+            });
         }
         var fefang = document.querySelector('#news_fe');
         function show_fefang() {
             fefang.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             tonshen.classList.remove('show');
             tvbs.classList.remove('show');
             today.classList.remove('show');
             console.log(2);
+
+             $('.yvideo').each(function () {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+            });
         }
         var tonshen = document.querySelector('#news_ton');
         function show_tonshen() {
             tonshen.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             fefang.classList.remove('show');
             tvbs.classList.remove('show');
             today.classList.remove('show');
             console.log(3);
+
+             $('.yvideo').each(function () {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+            });
         }
         var tvbs = document.querySelector('#news_tvbs');
         function show_tvbs() {
             tvbs.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             fefang.classList.remove('show');
             tonshen.classList.remove('show');
             today.classList.remove('show');
             console.log(4);
+
+             $('.yvideo').each(function () {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+            });
         }
         var today = document.querySelector('#news_tonight');
         function show_today() {
             today.classList.add('show');
+            chonte.classList.add('hide');
             chonte.classList.remove('show');
             fefang.classList.remove('show');
             tonshen.classList.remove('show');
             tvbs.classList.remove('show');
             console.log(5);
+
+             $('.yvideo').each(function () {
+                $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+            });
         }
     </script>
 </body>

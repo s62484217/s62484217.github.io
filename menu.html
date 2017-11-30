@@ -41,25 +41,6 @@
             margin-top: 100px;
         }
 
-        .bg_menu_left {
-            height: 10vh;
-            width: 45%;
-            padding-bottom: 10px;
-            background-size: contain;
-            background-image: url('imgs/123.png');
-            float:left;
-
-        }
-
-        .bg_menu_right {
-            height: 10vh;
-            width: 45%;
-            padding-bottom: 10px;
-            background-size: contain;
-            background-image: url('imgs/123.png');
-            float:left;
-        }
-
         .title {
             font-size: 24px;
             color: #e98a17;
@@ -68,6 +49,29 @@
             font-family: 微軟正黑體;
             float:left;
         }
+        .info_title {
+            margin-top: 90.7px;
+        }
+
+        strong {
+            font-size: 65px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .split {
+            color: white;
+        }
+        .line{
+            position: relative;
+            padding: 10px 0 30px;
+            margin-bottom: 25px;
+            border-bottom: 4px solid #868686;
+        }
+        @media Screen and (max-width: 960px) {
+        .split {
+            display: none;
+        }}
     </style>
 
 </head>
@@ -117,25 +121,27 @@
             </div>
         </div>
     </nav>
-
-    <div class="container">
-        <div class="title_box">
-            <div class="bg_menu_left">
-            </div>
-            <div class="title">
-                美食饗宴
-            </div>
-            <div class="bg_menu_right">
-            </div>
-            <div style="clear:both;"></div>
+    <div class="info_title line">
+        <div class="container">
+            <h2>
+                <strong>美食饗宴</strong>
+                <em class="split">
+                    <span>M</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>U</span>
+                </em>
+            </h2>
         </div>
+    </div>
         <br>
         <br>
         <br>
 
             <!-- <hr class="hr-text" data-content="Menu"> -->
+            <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-xl-6">
                     <a href="/images/b1.jpg " data-lightbox="image-1" data-title="炙烤豬排">
                         <img width="100%" src="/images/c2.jpg" alt="">
                     </a>
@@ -150,7 +156,7 @@
                         <br> 售價：280元
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-xl-6">
                     <a href="/images/b2.jpg " data-lightbox="image-1" data-title="酥烤雞排">
                         <img width="100%" src="/images/c5.jpg" alt="">
                     </a>
@@ -167,7 +173,7 @@
                         <br>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-xl-6">
                     <a href="/images/b3.jpg " data-lightbox="image-1" data-title="沙朗牛排">
                         <img width="100%" src="/images/c1.jpg" alt="">
                     </a>
@@ -184,7 +190,7 @@
                         <br>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-xl-6">
                     <a href="/images/b4.jpg " data-lightbox="image-1" data-title="菲力牛排">
                         <img width="100%" src="/images/c4.jpg" alt="">
                     </a>
@@ -199,7 +205,7 @@
                         <br> 售價：340元
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-xl-6">
                     <a href="/images/b5.jpg " data-lightbox="image-1" data-title="無骨牛小排">
                         <img width="100%" src="/images/c3.jpg" alt="">
                     </a>
@@ -215,6 +221,47 @@
                     </div>
                 </div>
             </div>
+        </div>
+            <br><br><br>
+            <!--footer    巢狀網格  -->
+            <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12 col-md-6 f_text">
+                                <a href="https://zh-tw.facebook.com/akaonisteak/" target="_blank">
+                                    <i class="fa fa-facebook fa-2x"></i>
+                                </a>
+                            </div>
+                        <div class="col-12 col-md-6 f_text">
+                                <a href="https://www.instagram.com/explore/locations/255433257/" target="_blank">
+                                    <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 f_text">
+                        營業時間：11:00~23:00|關於赤鬼|最新消息|美食饗宴|店家資訊
+                        <br>© 2017 赤鬼食品有限公司. All Rights Reserved.網站設計: 右邊第三排
+                    </div>
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12 col-md-6 f_text">
+                                <a href="https://www.youtube.com/channel/UCcTdev1h9L40bEB-P2mC2wA" target="_blank">
+                                    <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+    
+                            <div class="col-12 col-md-6 f_text">
+                                <a href="https://zh-tw.facebook.com/akaonisteak/" target="_blank">
+                                    <i class="fa fa-envelope fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+            <img class="ft_bg" src="imgs/footer_bg.png" alt="">
 
             <script src="/js/jquery-3.2.1.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
