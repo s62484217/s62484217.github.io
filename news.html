@@ -92,7 +92,7 @@
             display: none;
         }
 
-        #video{
+        #mssbox , #video{
             display: none;
         }
 
@@ -226,12 +226,14 @@
                     <div class="report" onclick="clickhidemessage()">媒體報導</div>
                 </div>
                 <div class="col-sm">
+                    <a href="https://goo.gl/uiVtuA" target="_blank">
                     <div class="raise104">人才招募</div>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="content">
-            <div id="mssbox">
+            <div id="mssbox" class="show">
                 <div class="row">
                     <div class="col col-xl-4">
                         <div class="card" style="width: 20rem;">
@@ -380,13 +382,17 @@
     <script>
         var discount = document.querySelector('#mssbox');
         function clickhidemessage() {
-            video.classList.add('show');
+            video.classList.remove('show');
+            console.log(discount);
             discount.classList.remove('show');
+            video.classList.add('show');
         }
 
         var video = document.querySelector('#video');
         function clickhidevideo() {
-            discount.classList.toggle('hide');
+            video.classList.remove('show');
+            discount.classList.remove('show');
+            discount.classList.add('show');
         }
 
         var chonte = document.querySelector('#news_chon');
