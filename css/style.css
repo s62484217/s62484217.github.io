@@ -259,3 +259,12 @@ a {
         display: block;
     }
 }
+
+@media Screen and (min-width: 960px) {
+    .web_footer{
+        display: block;
+    }
+    .mobile_footer{
+        display: none;
+    }
+}
