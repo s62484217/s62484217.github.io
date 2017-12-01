@@ -174,9 +174,8 @@ a {
 }
 
 .info {
-    width: 50%;
-    margin: 0 auto;
     color: white;
+    text-align: center;
 }
 
 .ft_bg {
