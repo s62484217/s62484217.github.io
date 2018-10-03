@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>赤鬼牛排</title>
+    <title>骰寶</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,8 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <!-- 用fontawesome的svg圖的話，要找到他的網址 getStarted裡複製Font Awesome CDN到google
     點開即有可複製網址列 -->
     <style>
@@ -48,18 +49,255 @@
             display: none;
         }
 
-        .test_color {
-            color: blue;
-            width: 300;
-            height: 300;
+        .div_color {
+            background: rgb(97, 29, 29);
+            width: 300px;
+            height: 200px;
+        }
+
+        .border_tilte {
+            border: 2px black solid;
+            height: 80px;
+        }
+
+        .div_4_flex {
+            display: flex;
+            height: 100px;
+            border: 2px black solid;
+        }
+
+        .div_dice12_flex {
+            display: flex;
+            height: 200px;
+            border: 2px black solid;
+        }
+
+        .flex1 {
+            text-align: center;
+            flex: 1;
+            border: 1px black solid;
+        }
+
+        .flex2 {
+            text-align: center;
+            flex: 1;
+            border: 1px black solid;
+        }
+
+        .text_center {
+            text-align: center;
+            line-height: 100px;
+            border: 1px black solid;
         }
     </style>
 </head>
 
-<body onload="myFunction()">
+<body>
 
-    <div class="test_color">
-        
+    <div class="row">
+        <div class="col-sm-5 border_tilte">你的金額:
+            <label for=""></label>
+        </div>
+        <div class="col-sm-7 border_tilte">開骰區:
+            <i class="fas fa-dice-six fa-5x"></i>
+            <i class="fas fa-dice-six fa-5x"></i>
+            <i class="fas fa-dice-six fa-5x"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 以小的區塊高度 -->
+        <div class="row" style="height: 250px;border: 2px black solid;text-align:center">
+            <div class="col-2" style="border:1px black solid;">
+                <span style="font-size:2cm;">小</span>
+                <br>
+                <span style="font-size:1cm;">4~10</span>
+                <br>
+                <span style="font-size:0.8cm;">1:1.035</span>
+                <br>
+                <span style="font-size:0.5cm;">豹子通殺</span>
+                <br>
+            </div>
+            <div class="col-1" style="border:1px black solid;">
+                <i class="fas fa-dice-two fa-3x"></i>
+            </div>
+            <div class="col-2" style="border:1px black solid;">
+                <i class="fas fa-dice-three fa-3x"></i>
+            </div>
+            <div class="col-2" style="border:1px black solid;">
+                <i class="fas fa-dice-three fa-3x"></i>
+            </div>
+            <div class="col-2" style="border:1px black solid;">
+                <i class="fas fa-dice-three fa-3x"></i>
+            </div>
+            <div class="col-1" style="border:1px black solid;">
+                <i class="fas fa-dice-three fa-3x"></i>
+            </div>
+            <div class="col-2" style="border:1px black solid;">
+                <span style="font-size:2cm;">大</span>
+                <br>
+                <span style="font-size:1cm;">11~17</span>
+                <br>
+                <span style="font-size:0.8cm;">1:1.035</span>
+                <br>
+                <span style="font-size:0.5cm;">豹子通殺</span>
+                <br>
+            </div>
+        </div>
+
+
+        <!-- 以4的區塊高度 -->
+        <div class="div_4_flex">
+            <div class="flex1">
+                <span style="font-size:1cm;">4</span>
+                <br> 1:70.3
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">5</span>
+                <br> 1:34.65
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">6</span>
+                <br> 1:20.4
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">7</span>
+                <br> 1:13.25
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">8</span>
+                <br> 1:9.17
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">9</span>
+                <br> 1:7.56
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">10</span>
+                <br> 1:6.92
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">11</span>
+                <br> 1:6.92
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">12</span>
+                <br> 1:7.56
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">13</span>
+                <br> 1:9.17
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">14</span>
+                <br> 1:13.25
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">15</span>
+                <br> 1:20.4
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">16</span>
+                <br> 1:34.65
+            </div>
+            <div class="flex1">
+                <span style="font-size:1cm;">17</span>
+                <br> 1:70.3
+            </div>
+        </div>
+
+
+        <!-- 以骰子1,2的區塊高度 -->
+        <div class="div_dice12_flex">
+            <div class="flex2">
+                <i class="fas fa-dice-one fa-3x"></i>
+                <i class="fas fa-dice-two fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-one fa-3x"></i>
+                <i class="fas fa-dice-three fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-one fa-3x"></i>
+                <i class="fas fa-dice-four fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-one fa-3x"></i>
+                <i class="fas fa-dice-five fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-one fa-3x"></i>
+                <i class="fas fa-dice-six fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-two fa-3x"></i>
+                <i class="fas fa-dice-three fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-two fa-3x"></i>
+                <i class="fas fa-dice-four fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-two fa-3x"></i>
+                <i class="fas fa-dice-five fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-two fa-3x"></i>
+                <i class="fas fa-dice-six fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-three fa-3x"></i>
+                <i class="fas fa-dice-four fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-three fa-3x"></i>
+                <i class="fas fa-dice-five fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-three fa-3x"></i>
+                <i class="fas fa-dice-six fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-four fa-3x"></i>
+                <i class="fas fa-dice-five fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-four fa-3x"></i>
+                <i class="fas fa-dice-six fa-3x"></i>1:6.13</div>
+            <div class="flex2">
+                <i class="fas fa-dice-five fa-3x"></i>
+                <i class="fas fa-dice-six fa-3x"></i>1:6.13</div>
+        </div>
+
+
+        <!-- 以1的區塊高度 -->
+        <div class="row" style="height: 100px;border: 2px black solid;">
+            <div class="col text_center">
+                <span style="font-size:1cm;">1　</span>
+                <i class="fas fa-dice-one fa-3x"></i>
+            </div>
+            <div class="col text_center">
+                <span style="font-size:1cm;">2　</span>
+                <i class="fas fa-dice-two fa-3x"></i>
+            </div>
+            <div class="col text_center">
+                <span style="font-size:1cm;">3　</span>
+                <i class="fas fa-dice-three fa-3x"></i>
+            </div>
+            <div class="col text_center">
+                <span style="font-size:1cm;">4　</span>
+                <i class="fas fa-dice-four fa-3x"></i>
+            </div>
+            <div class="col text_center">
+                <span style="font-size:1cm;">5　</span>
+                <i class="fas fa-dice-five fa-3x"></i>
+            </div>
+            <div class="col text_center">
+                <span style="font-size:1cm;">6　</span>
+                <i class="fas fa-dice-six fa-3x"></i>
+            </div>
+        </div>
+
+        <!-- 以單骰的區塊高度 -->
+        <div class="row" style="height: 50px;border: 2px black solid;">
+            <div class="col"style="text-align:center">
+                <span style="font-size:0.8cm;">單骰　1:1</span>
+            </div>
+            <div class="col"style="text-align:center">
+                <span style="font-size:0.8cm;">雙骰　1:2.4</span>
+            </div>
+            <div class="col"style="text-align:center">
+                <span style="font-size:0.8cm;">豹子　1:12</span>
+            </div>
+        </div>
+
     </div>
 
 
@@ -84,56 +322,48 @@
 
 
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+    <script src="js/unslider-min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+    </script>
+
+    <!-- 追蹤程式碼 - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110231423-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110231423-1');
+
+        function myFunction() {
+
+            $.ajax({
+                url: 'footer.html', success: function (data) {
+
+                    $("#footer").html(data);
 
 
-
-
-
-
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-            crossorigin="anonymous"></script>
-
-        <script src="js/unslider-min.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                loop: true,
+                    // alert(data);
+                }
             });
-        </script>
-
-        <!-- 追蹤程式碼 - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110231423-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-
-            gtag('config', 'UA-110231423-1');
-
-            function myFunction() {
-            
-                $.ajax({
-                    url: 'footer.html', success: function (data) {
-
-                        $("#footer").html(data);
-
-
-                        // alert(data);
-                    }
-                });
-            }
-        </script>
+        }
+    </script>
 
 
 
