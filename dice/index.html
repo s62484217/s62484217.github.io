@@ -72,6 +72,12 @@
             border: 2px black solid;
         }
 
+        .div_top_flex {
+            display: flex;
+            height: 270px;
+            border: 2px black solid;
+        }
+
         .flex1 {
             text-align: center;
             flex: 1;
@@ -87,6 +93,16 @@
         .text_center {
             text-align: center;
             line-height: 100px;
+            border: 1px black solid;
+        }
+
+        .double_dice {
+            text-align: center;
+            border: 1px black solid;
+        }
+
+        .triple_dice {
+            text-align: center;
             border: 1px black solid;
         }
     </style>
@@ -107,8 +123,8 @@
 
     <div class="container">
         <!-- 以小的區塊高度 -->
-        <div class="row" style="height: 250px;border: 2px black solid;text-align:center">
-            <div class="col-2" style="border:1px black solid;">
+        <div class="div_top_flex">
+            <div class="col-2" style="border:1px black solid;text-align:center">
                 <span style="font-size:2cm;">小</span>
                 <br>
                 <span style="font-size:1cm;">4~10</span>
@@ -118,22 +134,60 @@
                 <span style="font-size:0.5cm;">豹子通殺</span>
                 <br>
             </div>
-            <div class="col-1" style="border:1px black solid;">
-                <i class="fas fa-dice-two fa-3x"></i>
+            <div class="flex1">
+                <div class="double_dice">
+                    雙骰　1:12.37
+                </div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
             </div>
-            <div class="col-2" style="border:1px black solid;">
-                <i class="fas fa-dice-three fa-3x"></i>
+            <div class="flex1">
+                <div class="triple_dice">
+                    豹子　1:215
+                </div>
             </div>
-            <div class="col-2" style="border:1px black solid;">
-                <i class="fas fa-dice-three fa-3x"></i>
+            <div class="flex1">
+                <span style="font-size:0.4cm;">任一豹子</span>
+                <br>
+                <span style="font-size:0.4cm;">1:35</span>
+                <br>
+                <i class="fas fa-dice-one fa-2x"></i>
+                <i class="fas fa-dice-one fa-2x"></i>
+                <i class="fas fa-dice-one fa-2x"></i>
+                <br>
+                <i class="fas fa-dice-two fa-2x"></i>
+                <i class="fas fa-dice-two fa-2x"></i>
+                <i class="fas fa-dice-two fa-2x"></i>
+                <br>
+                <i class="fas fa-dice-three fa-2x"></i>
+                <i class="fas fa-dice-three fa-2x"></i>
+                <i class="fas fa-dice-three fa-2x"></i>
+                <br>
+                <i class="fas fa-dice-four fa-2x"></i>
+                <i class="fas fa-dice-four fa-2x"></i>
+                <i class="fas fa-dice-four fa-2x"></i>
+                <br>
+                <i class="fas fa-dice-five fa-2x"></i>
+                <i class="fas fa-dice-five fa-2x"></i>
+                <i class="fas fa-dice-five fa-2x"></i>
+                <br>
+                <i class="fas fa-dice-six fa-2x"></i>
+                <i class="fas fa-dice-six fa-2x"></i>
+                <i class="fas fa-dice-six fa-2x"></i>
+                <br>
             </div>
-            <div class="col-2" style="border:1px black solid;">
-                <i class="fas fa-dice-three fa-3x"></i>
+            <div class="flex1">
+                <div class="triple_dice">
+                    豹子　1:215
+                </div>
             </div>
-            <div class="col-1" style="border:1px black solid;">
-                <i class="fas fa-dice-three fa-3x"></i>
+            <div class="flex1">
+                <div class="double_dice">
+                    雙骰　1:12.37
+                </div>
             </div>
-            <div class="col-2" style="border:1px black solid;">
+            <div class="col-2" style="border:1px black solid;text-align:center">
                 <span style="font-size:2cm;">大</span>
                 <br>
                 <span style="font-size:1cm;">11~17</span>
@@ -287,16 +341,21 @@
 
         <!-- 以單骰的區塊高度 -->
         <div class="row" style="height: 50px;border: 2px black solid;">
-            <div class="col"style="text-align:center">
+            <div class="col" style="text-align:center">
                 <span style="font-size:0.8cm;">單骰　1:1</span>
             </div>
-            <div class="col"style="text-align:center">
+            <div class="col" style="text-align:center">
                 <span style="font-size:0.8cm;">雙骰　1:2.4</span>
             </div>
-            <div class="col"style="text-align:center">
+            <div class="col" style="text-align:center">
                 <span style="font-size:0.8cm;">豹子　1:12</span>
             </div>
         </div>
+
+
+
+
+
 
     </div>
 
