@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>赤鬼牛排</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 使用 RWD 功能 -->
+    <!-- 載入 Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 用fontawesome的svg圖的話，要找到他的網址 getStarted裡複製Font Awesome CDN到google
+    點開即有可複製網址列 -->
+    <style>
+        .swiper-container {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .f_text {
+            color: white;
+            text-align: center;
+        }
+
+        .mobile_footer {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img class="logo" src="imgs/logo_2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mt-1">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/menu.html">
+                            <div class="logo_gh"></div>美食饗宴
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/news.html">
+                            <div class="logo_gh"></div>最新消息
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/info.html">
+                            <div class="logo_gh"></div>店家資訊
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/about.html">
+                            <div class="logo_gh"></div>關於赤鬼
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="top">
+        <img class="logo_center" src="imgs/logo_gh_small.png" alt="">
+    </div>
+    <div class="container">
+        <div class="spaceMargin"></div>
+        <hr class="hr-text" data-content="訊息專區">
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="un_img" src="imgs/un_1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class="un_img" src="imgs/un_2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class="un_img" src="imgs/un_3.jpg" alt="">
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="container">
+        <hr class="hr-text" data-content="點餐步驟">
+        <div class="step">
+            <img class="step_1 step_img" src="imgs/step_1.png" alt="">
+            <img class="select_all simg_1" src="imgs/step_1_img.jpg" alt="">
+        </div>
+        <div class="step">
+            <img class="step_2 step_img" src="imgs/step_2.png" alt="">
+            <img class="select_all simg_2" src="imgs/step_2_img.png" alt="">
+        </div>
+        <div class="step">
+            <img class="step_3 step_img" src="imgs/step_3.png" alt="">
+            <img class="select_all simg_3" src="imgs/step_3_img.png" alt="">
+        </div>
+        <div class="step">
+            <img class="step_4 step_img" src="imgs/step_4.png" alt="">
+            <img class="select_all simg_4" src="imgs/step_4_img.png" alt="">
+        </div>
+        <div id="footer" class="container">
+
+        </div>
+        <img class="ft_bg" src="imgs/footer_bg.png" alt="">
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
+
+        <script src="js/unslider-min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+            });
+        </script>
+
+        <!-- 追蹤程式碼 - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110231423-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-110231423-1');
+
+            function myFunction() {
+            
+                $.ajax({
+                    url: 'footer.html', success: function (data) {
+
+                        $("#footer").html(data);
+
+
+                        // alert(data);
+                    }
+                });
+            }
+        </script>
+
+
+
+</body>
+
+</html>
